@@ -18,7 +18,7 @@ const resizeThreshold = 5;
 
 const stopProp = e => e.stopPropagation();
 
-class Tooltip extends React.Component {
+class TooltipLite extends React.Component {
   static propTypes = {
     arrow: PropTypes.bool,
     arrowSize: PropTypes.number,
@@ -367,4 +367,4 @@ class Tooltip extends React.Component {
   }
 }
 
-export default Tooltip;
+export default TooltipLite;
