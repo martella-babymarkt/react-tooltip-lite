@@ -299,11 +299,11 @@ export default function positions(
   const maxWidth = getTipMaxWidth();
 
   // force the tip to display the width we measured everything at when visible
-  // let width;
+  let width;
   if (tip) {
     // adding the exact width on the first render forces a bogus line break, so add 1px the first time
-    // const spacer = tip.style.width ? 0 : 1;
-    // width = Math.min(tip.offsetWidth, maxWidth) + spacer;
+    const spacer = tip.style.width ? 0 : 1;
+    width = Math.min(tip.offsetWidth, maxWidth) + spacer;
   }
 
   const tipPosition =
@@ -322,7 +322,7 @@ export default function positions(
     tip: {
       ...tipPosition,
       maxWidth,
-      // width,
+      width,
     },
     arrow: getArrowStyles(target, tip, realDirection, state, props),
     realDirection,
